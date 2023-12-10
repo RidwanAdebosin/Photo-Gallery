@@ -15,6 +15,8 @@ async function fetchImage() {
 
   try {
     btnEl.style.display = "none";
+    const loading = `<img src="loadingIcon.svg"/>`;
+    galleryEl.innerHTML = loading;
     await fetch(
       `https://api.unsplash.com/photos?per_page=${inputValue}&page=${Math.round(
         Math.random() * 1000
